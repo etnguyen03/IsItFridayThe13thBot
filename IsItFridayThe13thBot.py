@@ -47,6 +47,8 @@ while (Break == False):
 print (incrementDays)
 
 if (string == "Friday 13"):
-    subreddit.submit(title="Is it Friday the 13th?", selftext="Yes.\n---\n^(Today is " + todoString + ". The next Friday the 13th is " + str(incrementDays) + " day\(s\) away. This message was posted by a bot. [source](https://github.com/etnguyen03/IsItFridayThe13thBot))")
+    post = subreddit.submit(title="Is it Friday the 13th?", selftext="Yes.\n---\n^(Today is " + todoString + ". The next Friday the 13th is " + str(incrementDays) + " day\(s\) away. This message was posted by a bot. [source](https://github.com/etnguyen03/IsItFridayThe13thBot))")
+    post.set_flair("Yes")
 else:
-    subreddit.submit(title="Is it Friday the 13th?", selftext="No.\n---\n^(Today is " + todoString + ". The next Friday the 13th is " + str(incrementDays) + " day\(s\) away. This message was posted by a bot. [source](https://github.com/etnguyen03/IsItFridayThe13thBot))")
+    post = subreddit.submit(title="Is it Friday the 13th?", selftext="No.\n---\n^(Today is " + todoString + ". The next Friday the 13th is " + str(incrementDays) + " day\(s\) away. This message was posted by a bot. [source](https://github.com/etnguyen03/IsItFridayThe13thBot))")
+    post.set_flair("No")
